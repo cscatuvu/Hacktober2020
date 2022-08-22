@@ -1,0 +1,11 @@
+root@instance-1:/home/chuck# docker ps -a
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS                     PORTS                              NAMES
+bf24ca18bd72        seuliu/cve-2012-2122        "/usr/local/bin/flag…"   4 weeks ago         Up 4 weeks                 6379/tcp, 0.0.0.0:4048->3306/tcp   quivering-mysql
+1395d219001d        panubo/vsftpd:latest        "/entry.sh vsftpd"       5 weeks ago         Exited (143) 5 weeks ago                                      scanning2
+30d65c2633e3        hashicorp/http-echo         "/http-echo '-text=h…"   5 weeks ago         Up 5 weeks                 0.0.0.0:10809->5678/tcp            scanning1
+61b02194df75        netscape-webappsec:latest   "/bin/sh -c 'service…"   5 weeks ago         Up 5 weeks                 0.0.0.0:9367->80/tcp               netscape-webappsec
+6b120c54fdc1        7ffea6a0e0c8                "./entry-point.sh fl…"   5 weeks ago         Up 4 weeks                 0.0.0.0:3543->8080/tcp             apache-confluence
+04ccc570c631        vulnerables/cve-2014-6271   "/main.sh default"       5 weeks ago         Up 5 weeks                 0.0.0.0:4736->80/tcp               shellshock
+8f97fa749754        nginx                       "/docker-entrypoint.…"   5 weeks ago         Up 5 weeks                 0.0.0.0:1337->80/tcp               mynginx100
+
+docker run -p 10809:5678 --name scanning1 -d hashicorp/http-echo -text="hello world"

